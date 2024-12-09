@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ /* html {
+    background-color: rgb(0, 0, 0);
+  }  */
+
+
+      /* Custom Pagination */
+      .swiper-pagination-bullet {
+        @apply w-4 h-4 mt-10 bg-blue-500; /* Size and color */
+      }
+      .swiper-pagination-bullet-active {
+        @apply bg-primary scale-90; /* Active color and size */
+      }
