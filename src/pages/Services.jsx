@@ -23,6 +23,7 @@ const Services = () => {
 
   return (
     <section
+    dir="ltr"
       className={`services py-12 ${
         path === "/" ? "" : "py-12 "
       }`}

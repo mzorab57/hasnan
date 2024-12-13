@@ -10,8 +10,7 @@ import { useTranslation } from "react-i18next"; // Import useTranslation hook
 import carousel2 from "/assets/images/bghero (1).png";
 import carousel4 from "/assets/images/coat1.png";
 import carousel5 from "/assets/images/bghero (5).png";
-import carousel6 from "/assets/images/pan.png";
-import carobg from "/assets/images/bgcaro.jpg";
+import carousel6 from "/assets/images/speard.webp";
 
 const Carousel = () => {
   const { t } = useTranslation(); // Destructure the translation function
@@ -54,7 +53,7 @@ const Carousel = () => {
               slidesPerView: 4,
             },
           }}
-          className="flex flex-col justify-center items-center  "
+          className="flex flex-col justify-center items-center    "
         >
           {[
             carousel2,
@@ -68,11 +67,11 @@ const Carousel = () => {
           ].map((image, index) => (
             <SwiperSlide className="swiper-slide py-14" key={index}>
               <div className="relative slide-item border border-primary rounded-xl overflow-hidden">
-                <div className="image kf-image-hover w-fit h-60 lg:h-72 overflow-hidden group cursor-pointer">
+                <div className="image kf-image-hover  h-80  overflow-hidden group cursor-pointer">
                   <img
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    className="size-full object-cover group-hover:scale-105 duration-700 "
+                    className="size-full  object-cover group-hover:scale-105 duration-700 "
                   />
 
                   {/* Text Overlay */}

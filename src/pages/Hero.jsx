@@ -5,9 +5,8 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Navigation, Autoplay } from "swiper/modules";
 import haschp from "/assets/images/bghero (1).png";
-// import coat from "/assets/images/bghero (2).webp";
-import coat1 from "/assets/images/bghero (3).webp";
-import cook from "/assets/images/bghero (4).webp";
+import coat1 from "/assets/images/bghero (6).png";
+import cook from "/assets/images/coat1.png";
 import pan from "/assets/images/bghero (5).png";
 
 import { useTranslation } from "react-i18next";
@@ -40,13 +39,13 @@ const Hero = () => {
     setActiveIndex(swiper.activeIndex);
   };
 
-  const images = [pan,coat1, cook, haschp ];
+  const images = [coat1, cook, haschp,pan ];
   const imageDescriptions = t("swiper_images", { returnObjects: true });
 
   return (
     <section
       name="hero"
-      className="has-section bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500 via-yellow-500 to-white w-full h-screen lg:flex-row flex flex-col items-center justify-center relative"
+      className="has-section bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500 via-yellow-500 to-yellow-200 w-full h-screen lg:flex-row flex flex-col items-center justify-center relative"
     >
       {/* Text Section */}
       <div className="max-w-4xl w-full mx-20 mt-28 lg:mt-0 text-5xl text-white px-4">

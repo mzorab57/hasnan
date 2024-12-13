@@ -9,8 +9,8 @@ const ServiceItem = ({ imgSrc, altText, title, onClick }) => {
       
      
 <div className="flex justify-center items-center">
-          <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500 via-yellow-500 to-white w-72 h-56  rounded-3xl relative ">
-            <div className="text-white text-4xl  absolute bottom-0 left-1/3 z-40 font-courgette">
+          <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500 via-yellow-500 to-yellow-200  w-72 h-56  rounded-3xl relative ">
+            <div className="text-white text-4xl  absolute bottom-0 left-1/3 z-10 font-courgette">
             <h5 className="text-black text-xl px-3 pt-0.5 rounded-tr-2xl rounded-tl-2xl bg-white w-24 text-center h-10">{title}</h5>
             </div>
           </div>

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { scroller } from "react-scroll";
-import artukbey_logo from "/assets/images/hasnan_logo.png";
+import artukbey_logo from "/assets/images/logo (1).png";
 import MobileMenu from "./MobileMenu";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import LanguageSwitcher from "../component/LanguageSwitcher";
 import { useTranslation } from "react-i18next"; // Import the useTranslation hook
 
-const Navbar = ({ menuOpen, setMenuOpen }) => {
+const Navbar = ({setMenuOpen }) => {
   const { t } = useTranslation(); // Destructure the translation function
   const [color, setColor] = useState(false);
   const [isOpenMenu, setOpenMenu] = useState(false);
@@ -33,20 +33,20 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
 
       {/* Main Navbar */}
       <div
-        className={`flex justify-between text-xl items-center py-4 h-20 bg-white w-full px-6 lg:px-10 ${
+        className={`flex justify-between text-2xl font-semibold items-center py-4 h-20 bg-white w-full px-6 lg:px-10 ${
           color && "fixed top-0 py-4 ease-in transition-all z-30 bg-white"
         }`}
       >
         {/* Logo */}
-        <div className="flex font-courgette justify-center items-center">
+        <div className="flex font-courgette justify-center   items-center">
           <Link to="/">
-            <img src={artukbey_logo} alt="artkbey Logo" className="w-16 h-24 px-2" />
+            <img src={artukbey_logo} alt="artkbey Logo" className=" h-56 px-2" />
           </Link>
-          <span>Hasnan Company</span>
+          
         </div>
 
         {/* Navigation Menu - Hidden on Mobile */}
-        <ul className={`hidden lg:flex space-x-8 rtl:space-x-8 font-courgette`}>
+        <ul className={`hidden lg:flex space-x-8  mr-40  justify-center items-center rtl:space-x-8 font-courgette`}>
           <li onMouseMove={() => setMenuOpen(false)}>
             <Link
               to="/"

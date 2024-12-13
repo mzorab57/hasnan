@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Cross as Hamburger } from "hamburger-react";
 import { scroller } from "react-scroll";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GrLanguage } from "react-icons/gr";
 import { useTranslation } from "react-i18next";
-import { FaFacebookF } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+
 
 const MobileMenu = ({ isOpenMenu, setOpenMenu }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +38,6 @@ const MobileMenu = ({ isOpenMenu, setOpenMenu }) => {
     <header className="lg:hidden font-courgette fixed top-0 left-0 w-full h-14 text-black z-50">
       <div className="container flex justify-end p-4">
         <Hamburger
-          toggled={isOpenMenu}
           toggle={setOpenMenu}
           size={28}
           duration={0.3}
