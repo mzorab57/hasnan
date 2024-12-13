@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import LanguageSwitcher from "../component/LanguageSwitcher";
 import { useTranslation } from "react-i18next"; // Import the useTranslation hook
 
-const Navbar = ({setMenuOpen }) => {
+const Navbar = ({ setMenuOpen }) => {
   const { t } = useTranslation(); // Destructure the translation function
   const [color, setColor] = useState(false);
   const [isOpenMenu, setOpenMenu] = useState(false);
@@ -26,7 +26,7 @@ const Navbar = ({setMenuOpen }) => {
 
   return (
     <div
-    dir="ltr"
+      dir="ltr"
       className={`kf-navbar text-black  flex place-self-center w-full justify-between lg:flex-col`}
     >
       {color ? <div className="h-20 bg-white"></div> : null}
@@ -40,13 +40,18 @@ const Navbar = ({setMenuOpen }) => {
         {/* Logo */}
         <div className="flex font-courgette justify-center   items-center">
           <Link to="/">
-            <img src={artukbey_logo} alt="artkbey Logo" className=" h-56 px-2" />
+            <img
+              src={artukbey_logo}
+              alt="artkbey Logo"
+              className=" h-56 px-2"
+            />
           </Link>
-          
         </div>
 
         {/* Navigation Menu - Hidden on Mobile */}
-        <ul className={`hidden lg:flex space-x-8  mr-40  justify-center items-center rtl:space-x-8 font-courgette`}>
+        <ul
+          className={`hidden lg:flex space-x-8  mr-40  justify-center items-center rtl:space-x-8 font-courgette`}
+        >
           <li onMouseMove={() => setMenuOpen(false)}>
             <Link
               to="/"
@@ -69,14 +74,26 @@ const Navbar = ({setMenuOpen }) => {
 
           {/* Menu */}
           <li onMouseMove={() => setMenuOpen(false)} className="group relative">
-            <Link onClick={()=> { window.scrollTo({ top: 0, behavior: 'smooth' })}} to="/menu" className="hover:text-primary">
+            <Link
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              to="/menu"
+              className="hover:text-primary"
+            >
               {t("category")}
               <i className="las la-angle-down ml-1"></i>
             </Link>
           </li>
 
           <li onClick={() => setMenuOpen(false)}>
-            <Link onClick={()=> { window.scrollTo({ top: 0, behavior: 'smooth' })}} to="/services" className="hover:text-primary">
+            <Link
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              to="/services"
+              className="hover:text-primary"
+            >
               {t("services")}
             </Link>
           </li>

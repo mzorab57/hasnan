@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer name="contacts" className=" text-black  py-12 text-center   ">
+    <footer name="contacts" className=" text-black  py-12   ">
       <div className="container mx-auto px-4 max-w-[1400px] ">
         <div className="flex flex-col md:flex-row justify-between  border-t pt-10 border-gray-700 items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* Logo Section */}
@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
 
           {/* Working Hours Section */}
-          <div className="md:w-1/4 text-center">
+          <div className="md:w-1/4  w-full  text-center">
             <h5 className="text-xl font-courgette mb-4">{t("working_hours")}</h5>
             <ul>
               <li className="mb-2">
@@ -35,10 +35,10 @@ const Footer = () => {
           </div>
 
           {/* Contact Us Section */}
-          <div className="md:w-1/4">
+          <div className="md:w-1/4 w-full  text-center">
             <h5 className="text-xl font-courgette mb-4">{t("contact_us")}</h5>
-            <ul>
-              <li className="flex items-center mb-2">
+            <ul className="w-full flex flex-col justify-center items-center  text-center">
+              <li className=" mb-2">
                 
                 <span>{t("location")}<span>{t("addres")}</span></span> 
               </li>
